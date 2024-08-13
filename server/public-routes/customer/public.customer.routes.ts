@@ -185,7 +185,6 @@ customerPublicRouter.post<
     });
     let response: string;
     if (customerDetails) {
-      console.log("i m in if")
 
       response = await customerModel.updateCustomer({
         name: name,
@@ -200,7 +199,6 @@ customerPublicRouter.post<
         clientId,
       });
     } else {
-      console.log("i m in else")
       response = await customerModel.createCustomer({
         name: name,
         aadhar_no: aadhaar,
@@ -1257,6 +1255,7 @@ customerPublicRouter.put<Record<never, never>, { message: string }>(
       res.status(200).send({ message: 'Approval Updated!' });
     } catch (error) {
       logger.error(error);
+      console.log("process error 1258",error)
       console.log(error);
       res.status(500).send({ message: 'Some error occured' });
     }

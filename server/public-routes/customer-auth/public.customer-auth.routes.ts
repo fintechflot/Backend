@@ -24,8 +24,7 @@ customerAuthRouter.post<
   { phoneNo: string; clientId: string }
 >('/get_otp', async (req, res) => {
   try {
-    console.log(req.body)
-    console.log("gaurav")
+
     const { phoneNo, clientId } = req.body;
     let phoneOtp = 0;
     // * generate otp
@@ -79,7 +78,6 @@ customerAuthRouter.post<
   { phoneNo: string; otp: string; clientId: string }
 >('/validate', async (req, res) => {
   try {
-    console.log(req.body)
     const { phoneNo, otp, clientId } = req.body;
 
     const customerOtp = await customerOtpModel.getCustomerByPhone({

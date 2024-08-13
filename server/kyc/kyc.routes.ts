@@ -312,6 +312,7 @@ kycRouter.post<{ leadId: string }, { message: string }>(
       const userId = req.user.user;
       //@ts-ignore
       const clientId = req.clientId;
+      console.log(userId, clientId)
 
       const leadDetails = await leadsService.getLead({ leadId, clientId });
       const customerDetails = await customerService.getCustomerByLeadId({
@@ -375,10 +376,10 @@ kycRouter.post<{ leadId: string }, { message: string }>(
                 date: format(new Date(), 'dd-MM-yyyy'),
                 customer_address:
                   addressDetails.at(0)?.address +
-                    ', ' +
-                    addressDetails?.at(0)?.city +
-                    ', ' +
-                    addressDetails?.at(0)?.state || '',
+                  ', ' +
+                  addressDetails?.at(0)?.city +
+                  ', ' +
+                  addressDetails?.at(0)?.state || '',
                 date_of_disbursal: format(new Date(), 'dd-MM-yyyy') || '',
                 loan_no: approvalDetails?.loanNo || '',
                 purpose: leadDetails.purpose,

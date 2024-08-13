@@ -25,7 +25,6 @@ const getClientsByUserId = async ({ clientIds }: { clientIds: string[] }) => {
       client_status: 'Active',
     },
   });
-
   return clients;
 };
 

@@ -412,7 +412,6 @@ const collectionDailyTrack = ({
   const firstDateOfMonth = startOfMonth(new Date(year, month - 1, 1));
   const lastDateOfMonth = lastDayOfMonth(new Date(firstDateOfMonth));
 
-  console.log(firstDateOfMonth, lastDateOfMonth);
   //get all the days of a month array
   const allDaysOfMonth = eachDayOfInterval({
     start: firstDateOfMonth,
