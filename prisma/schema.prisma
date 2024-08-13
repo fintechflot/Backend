@@ -525,6 +525,8 @@ model pan_kyc {
 
 
 
+
+
 enum address_type {
   Permanent_Address @map("Permanent Address")
   Current_Address   @map("Current Address")
