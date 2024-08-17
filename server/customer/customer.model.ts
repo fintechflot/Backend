@@ -151,6 +151,7 @@ const getCustomerByPhoneNo = async ({
       client_id: clientId,
     },
   });
+  console.log('getting customer by phone ');
   return response;
 };
 
