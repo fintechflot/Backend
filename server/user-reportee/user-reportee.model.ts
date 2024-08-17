@@ -61,6 +61,8 @@ const getUserReportingByReporteeId = async ({
   userId: string;
   clientId: string;
 }) => {
+  console.log("userId",userId)
+  console.log("clientId",clientId)
   const reportingId = await prisma.userreportees.findFirst({
     where: {
       user_reportee_id: userId,
