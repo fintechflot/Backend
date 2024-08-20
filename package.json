@@ -26,6 +26,7 @@
     "axios": "^1.7.4",
     "base-64": "1.0.0",
     "bcrypt": "5.1.1",
+    "body-parser": "^1.20.2",
     "cors": "2.8.5",
     "date-fns": "2.30.0",
     "dotenv": "16.3.1",
@@ -41,6 +42,9 @@
     "node-cron": "3.0.2",
     "nodemon": "3.0.1",
     "puppeteer": "21.5.2",
+
+    "razorpay": "^2.9.4",
+
     "rimraf": "5.0.1",
     "uuid": "9.0.1",
     "winston": "3.10.0",

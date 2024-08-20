@@ -79,7 +79,6 @@ customerAuthRouter.post<
   { phoneNo: string; otp: string; clientId: string }
 >('/validate',  async (req:any, res:any) => {
   try {
-    console.log(req.body)
     const { phoneNo, otp, clientId } = req.body;
 
     const customerOtp = await customerOtpModel.getCustomerByPhone({

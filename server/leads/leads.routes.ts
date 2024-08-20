@@ -165,7 +165,6 @@ leadsRouter.get<
     const startDate = decodeURIComponent(req.query.startDate || '');
     const endDate = decodeURIComponent(req.query.endDate || '');
     const assigneeId = req.query.assigneeId;
-
     const userId: string = req.user.user;
 
     const clientId = req.clientId;

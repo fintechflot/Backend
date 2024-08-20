@@ -183,6 +183,8 @@ customerPublicRouter.post<
       aadhaar,
       clientId,
     });
+
+
     let response: string;
     if (customerDetails) {
       console.log('i m in if');
@@ -215,7 +217,7 @@ customerPublicRouter.post<
     }
 
     let userId: string | null = '';
-
+console.log("body=",req.body)
     // if lead not in eligible range then assign to no one
     if (monthlyIncome === '₹0-₹35,000') {
       userId = null;
@@ -226,6 +228,7 @@ customerPublicRouter.post<
         branch: 'Delhi',
         clientId,
       });
+      console.log("userId=",userId)
 
       if (userId === null) {
         userId = await userAssignedModel.getNotAssignedUser({
@@ -233,6 +236,7 @@ customerPublicRouter.post<
           branch: 'Delhi',
           clientId,
         });
+        console.log("userId==",userId)
       }
     }
     if (user !== null) {

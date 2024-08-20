@@ -87,6 +87,7 @@ const getLeads = async ({
   const userDetails = await userModel.getUser({ userId, clientId });
   let allLeads;
   let leadsCount;
+  console.log("userDetails===",userDetails)
 
   if (userDetails?.role === 'Admin' || userDetails?.role === 'Service') {
     allLeads = await adminModel.getAllLeadsAdmin({
